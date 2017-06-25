@@ -42,13 +42,13 @@ var app = {
     // check cordova-plugin-file status
     console.log(cordova.file);
     
-    var adapter = new LokiCordovaFSAdapter({"prefix": "loki"});
+    var fsAdapter = new LokiCordovaFSAdapter({"prefix": "loki"});
     var db = new loki('products_db', {
       autoload: true,
       autoloadCallback : function() { databaseInitialize },
       autosave: true,
       autosaveInterval: 1000,
-      adapter: adapter
+      adapter: fsAdapter
     });
 
     function databaseInitialize() {
