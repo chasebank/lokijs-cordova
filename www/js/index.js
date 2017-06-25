@@ -38,6 +38,8 @@ var app = {
     //
     // Loki
     //
+    
+    // check cordova-plugin-file status
     console.log(cordova.file);
     
     var adapter = new LokiCordovaFSAdapter({"prefix": "loki"});
